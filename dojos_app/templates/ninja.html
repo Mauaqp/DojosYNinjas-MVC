@@ -15,9 +15,9 @@
         <form action="/ninjas" method="POST">
             <div>
                 <label>Dojo</label>
-                <select name="dojos">
+                <select name="dojo_id">
                     {% for dojo in listaDojos%}
-                        <option value={{dojo.id}}>{{dojo.nombre}}</option>></option>
+                        <option value="{{dojo.id}}">{{dojo.nombre}}</option>
                     {% endfor %}
                 </select>
             </div>
@@ -28,6 +28,10 @@
             <div>
                 <label>Last Name</label>
                 <input type="text" name="last_name" id="last_name">
+            </div>
+            <div>
+                <label>Age</label>
+                <input type="number" name="age" id="age">
             </div>
             <button type="submit">Submit</button>
         </form>
